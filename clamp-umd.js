@@ -9,7 +9,7 @@
 
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define([], factory());
+    define([], factory);
   } else {
     root.clamp = factory();
   }
@@ -20,6 +20,7 @@
    * @param {Object} options. Options to pass to the clamper.
    */
   function clamp(element, options) {
+    console.log('clamp running');
     options = options || {};
 
     var self = this,
